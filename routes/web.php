@@ -21,6 +21,11 @@ Route::get('/', function () {
     return '<h1>Welcome, aleks</h1>';
 });
 
+Route::get('/home', function () {
+  $test = "aleks";
+    return view('home', compact('test'));
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
